@@ -1,26 +1,18 @@
-<template>
-    <div class="grid gap-4 grid-cols-4 px-4">
-        <Card :card="card" />
-        <Card :card="card" />
-        <Card :card="card" />
-        <Card :card="card" />
-        <Card :card="card" />
-        <Card :card="card" />
-        <Card :card="card" />
-        <Card :card="card" />
-        <Card :card="card" />
-    </div>
-</template>
-
 <script>
-    export default {
-        data() {
-            return {
-                card: {
-                    imgLink: "/img/cards/1.jpg",
-                    name: "Some card name"
-                }
-            }
+import { useCardsStore } from '../stores/CardsStore';
+export default {
+    setup() {
+        const cards = useCardsStore()
+        cards.fetchCards()
+        return {
+            cards: cards,
         }
     }
+}
 </script>
+
+<template>
+    <div class="grid gap-4 grid-cols-4 px-4">
+        <Card v-for="card in cards.getCards" :key="card.id" :card="card" />
+    </div>
+</template>

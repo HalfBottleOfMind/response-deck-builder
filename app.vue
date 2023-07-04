@@ -3,6 +3,7 @@
     <Header />
     <div class="flex pt-8">
       <div class="flex-initial w-3/4">
+        <Filters />
         <Cards />
       </div>
       <div class="flex-initial w-1/4">

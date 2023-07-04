@@ -1,6 +1,6 @@
 <template>
     <div class="w-full">
-        <img :src="card.imgLink" class="rounded-3xl" />
+        <img :src="imgLink" class="rounded-3xl" />
         <div class="text-xl flex justify-center">
             <div class="cursor-pointer">-</div>
             <span class="px-8 text-center">{{ card.name }}</span>
@@ -10,18 +10,21 @@
 </template>
 
 <script>
-    export default {
-        props: {
-            card: {
-                imgLink: {
-                    type: String,
-                    required: true
-                },
-                name: {
-                    type: String,
-                    required: true
-                }
+export default {
+    props: {
+        card: {
+            name: {
+                type: String,
+                required: true
             }
-        },
+        }
+    },
+    setup(props) {
+        const imgLink = '/img/cards/' + props.card.id + '.jpg'
+
+        return {
+            imgLink,
+        }
     }
+}
 </script>
