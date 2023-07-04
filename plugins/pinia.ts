@@ -1,9 +1,11 @@
-import { useCardsStore } from '~/stores/CardsStore'
+import { useCardsStore } from '../stores/CardsStore'
+import { useDeckStore } from '../stores/DeckStore'
 
 export default defineNuxtPlugin(({ $pinia }) => {
   return {
     provide: {
-      store: useCardsStore($pinia)
+      cardsStore: useCardsStore($pinia),
+      deckStore: useDeckStore($pinia),
     }
   }
 })

@@ -1,10 +1,19 @@
 <template>
-    <div>
-        deck
+    <div v-for="card in deckStore.cards">
+        {{ card.name }}
     </div>
 </template>
 
 <script>
-// import { useMyStore } from '../stores/myStore';
-// useMyStore()
+import { useDeckStore } from '../stores/DeckStore';
+
+export default {
+    setup() {
+        const deckStore = useDeckStore()
+
+        return {
+            deckStore
+        }
+    }
+}
 </script>
