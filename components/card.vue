@@ -2,9 +2,9 @@
     <div class="w-full">
         <img :src="imgLink" class="rounded-3xl" />
         <div class="text-xl flex justify-center">
-            <div class="cursor-pointer" v-on:click="deckStore.removeCard(card)">-</div>
+            <button class="border rounded px-4 bg-gray-700" v-on:click="deckStore.removeCard(card)">-</button>
             <span class="px-8 text-center">{{ card.name }}</span>
-            <div class="cursor-pointer" v-on:click="deckStore.addCard(card)">+</div>
+            <button class="border rounded px-4 bg-gray-700" v-on:click="deckStore.addCard(card)">+</button>
         </div>
     </div>
 </template>

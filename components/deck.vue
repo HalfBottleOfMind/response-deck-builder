@@ -1,7 +1,9 @@
 <template>
     <div class="sticky top-0">
         <div v-for="card in deckStore.cards">
-            {{ card.name }}
+            <button class="border rounded px-4 bg-gray-700" v-on:click="deckStore.removeCard(card)">-</button>
+            <button class="border rounded px-4 bg-gray-700" v-on:click="deckStore.addCard(card)">+</button>
+            <span class="pl-2 text-center">{{ card.name }}</span>
         </div>
     </div>
 </template>
