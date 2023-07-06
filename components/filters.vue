@@ -26,6 +26,7 @@
             <option value="purple">purple</option>
             <option value="teal">teal</option>
             <option value="brown">brown</option>
+            <option value="red">red</option>
             <option value="green">green</option>
             <option value="blue">blue</option>
         </select>
