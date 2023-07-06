@@ -1,6 +1,8 @@
 <template>
-    <div v-for="card in deckStore.cards">
-        {{ card.name }}
+    <div class="sticky top-0">
+        <div v-for="card in deckStore.cards">
+            {{ card.name }}
+        </div>
     </div>
 </template>
 
