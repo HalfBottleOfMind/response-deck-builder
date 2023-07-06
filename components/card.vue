@@ -22,7 +22,7 @@ export default {
         }
     },
     setup(props) {
-        const imgLink = '/img/cards/' + props.card.id + '.jpg'
+        const imgLink = '/img/cards/' + props.card.name + '.jpg'
 
         const deckStore = useDeckStore()
 
