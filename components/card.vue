@@ -22,7 +22,7 @@ export default {
         }
     },
     setup(props) {
-        const imgLink = '/img/cards/' + props.card.name + '.jpg'
+        const imgLink = 'https://response-cards.hbom.ru/storage/' + props.card.name + '.jpg'
 
         const deckStore = useDeckStore()
 
